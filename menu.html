@@ -1,0 +1,43 @@
+﻿
+            <!--左边点菜部分-->
+            <div id="leftMenu" ng-controller="cataController" >
+                <!--上部菜单类别导航条-->
+                <div class="tabs-striped tabs-top tabs-background-positive tabs-color-light">
+                    <ul class="tabs">
+                        <a class="tab-item" ng-repeat="cata in catas track by $index" ng-click="tabClick(cata.catagrogy,$index)" ng-class="$index == _tab.index ? 'actived' : ''">
+                            <li>{{cata.catagrogy}}</li>
+                        </a>
+                    </ul>
+                </div>
+
+
+                <!--下部菜品信息-->
+                <ion-content >
+                    <ul class="ion-list" style="margin-top: 75px;">
+                    <li class="item item-thumbnail-left item-button-right" ng-repeat="foodList in foodLists track by $index">
+                        <img src={{foodList.imgSrc}} alt="{{foodList.alt}}">
+                        <h1>{{foodList.foodName}}</h1>
+                        <h2>{{foodList.foodPrice}}元/{{foodList.foodUnit}}</h2>
+                        <button class="button button-clear">
+                            <i class="icon ion-ios-plus-outline"></i>
+                        </button>
+                    </li>
+                </ul>
+                </ion-content>
+                
+
+                <!--<ion-list>
+                    <ion-item ng-repeat="foodList in foodLists track by $index">
+                            <img src={{foodList.imgSrc}} alt="{{foodList.alt}}">
+                            <h1>{{foodList.foodName}}</h1>
+                            <h2>{{foodList.foodPrice}}元/{{foodList.foodUnit}}</h2>
+                            <button class="button button-clear">
+                                <i class="icon ion-ios-plus-outline"></i>
+                            </button>
+                    </ion-item>
+                </ion-list>-->
+
+
+            </div>
+
+		

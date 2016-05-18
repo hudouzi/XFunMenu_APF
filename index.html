@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="menuApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/XFunMenu.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+
+
+    <script type="text/javascript" src="scripts/index.js"></script>
+    <script type="text/javascript" src="js/XFunMenu.js"></script>
+  </head>
+  <body>
+    <ion-pane >
+            <div class="raw">
+                    <ion-content id="content" class="col col-80" ui-view >
+                       
+                    </ion-content>
+
+              
+                <div class="col col-20" id="rightContent">
+                    <div class="welcome" id="welcome">欢迎你体验小方电子菜单</div>
+                    <a href="#/menu">
+                    <div class="button button-light button-outline  button-block" id="addFood">点餐</div>
+                    </a>
+
+
+                    <div class="button button-light button-outline  button-block" id="shopCar">购物车</div>
+                </div>
+                </div>
+        </ion-pane>
+  </body>
+</html>
